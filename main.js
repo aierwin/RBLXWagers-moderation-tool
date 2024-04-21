@@ -5,7 +5,7 @@ const { autoUpdater, AppUpdater } = require("electron-updater");
 
 let mainWindow;
 
-autoUpdater.autoDownload = false;
+autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
 
 function createWindow() {
