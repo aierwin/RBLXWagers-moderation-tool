@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.chat-message, .withdrawal-request, .user {
+    border: 1px solid #2c3e50;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+}
+
+.edit-btn, .delete-btn, .save-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.deny-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #780b0b;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.approve-btn {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #2e7113;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+ .approve-btn:hover, .deny-btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.edit-btn:hover, .delete-btn:hover, .save-btn:hover {
+    background-color: #000000;
+}
+
+input[type="number"], input[type="checkbox"], #user-search {
+    margin-left: 5px;
+    vertical-align: middle;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #2c3e50;
+    background-color: #34495e;
+    color: #fff;
+}
+
+input[type="number"]:focus, input[type="checkbox"]:focus, #user-search:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#withdrawal-search {
+    margin-bottom: 10px;
+}
+
+#withdrawal-requests {
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 20px; /* Add some space for scrollbar */
+}
+
+#user-search {
+    width: calc(100% - 10px);
+}

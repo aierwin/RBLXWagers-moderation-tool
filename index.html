@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moderation Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Moderation Dashboard</h1>
+        <section id="chat-section">
+            <h2>Chat Monitoring</h2>
+            <div class="chat-message">
+                <p>This is a chat message</p>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+            <!-- More chat messages will be dynamically added here -->
+        </section>
+        <section id="withdrawals-section">
+            <h2>Withdrawals</h2>
+            <div class="withdrawal-request">
+                <div id="withdrawal-search">
+                    <input type="text" id="user-search" placeholder="Search for a user...">
+                </div>
+                <div>
+                    <p>User XYZ requested withdrawal of $100</p>
+                    <button class="approve-btn">Approve</button>
+                    <button class="deny-btn">Deny</button>
+                </div>
+            </div>
+            <!-- More withdrawal requests will be dynamically added here -->
+        </section>
+        <section id="users-section">
+            <h2>Users</h2>
+            <div class="user">
+                <p>User: John Doe</p>
+                <label>Balance:</label>
+                <input type="number" value="100">
+                <label>Withdrawals Enabled:</label>
+                <input type="checkbox" checked>
+                <button class="save-btn">Save Changes</button>
+            </div>
+            <!-- More users will be dynamically added here -->
+        </section>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
