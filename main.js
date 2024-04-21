@@ -1,10 +1,12 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
-const { app, autoUpdater, dialog } = require('electron')
-require('update-electron-app')()
+const { autoUpdater, AppUpdater } = require("electron-updater");
 
 let mainWindow;
+
+autoUpdater.autoDownload = false;
+autoUpdater.autoInstallOnAppQuit = true;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
@@ -26,7 +28,10 @@ function createWindow() {
     });
 }
 
-app.on('ready', createWindow);
+app.on('ready', function () {
+  createWindow();
+  autoUpdater.checkForUpdatesAndNotify();
+});
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
